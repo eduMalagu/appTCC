@@ -1,0 +1,461 @@
+export type MenuItem = {
+  id: number;
+  nome: string;
+  descricao: string;
+  preco: number;
+  emoji?: string;
+};
+
+export type Restaurant = {
+  id: number;
+  nome: string;
+  categoria: string;
+  tempo: string;
+  taxa: number;
+  nota: number;
+  descricao: string;
+  menu: MenuItem[];
+  emoji?: string;
+};
+
+export const restaurantes: Restaurant[] = [
+  {
+    id: 1,
+    nome: "Sabor da Casa",
+    categoria: "Comida brasileira",
+    tempo: "25-35 min",
+    taxa: 5,
+    nota: 4.8,
+    descricao: "Pratos simples, bem servidos e com gosto de comida caseira.",
+    emoji: "🍛",
+    menu: [
+      {
+        id: 1,
+        nome: "Marmita Executiva",
+        descricao: "Arroz, feijão, carne e salada.",
+        preco: 24.9,
+        emoji: "🍚",
+      },
+      {
+        id: 2,
+        nome: "Frango Grelhado",
+        descricao: "Frango com purê e legumes.",
+        preco: 22.9,
+        emoji: "🍗",
+      },
+      {
+        id: 3,
+        nome: "Suco Natural",
+        descricao: "Laranja ou limão.",
+        preco: 7.5,
+        emoji: "🧃",
+      },
+      {
+        id: 4,
+        nome: "Bife com Batata",
+        descricao: "Bife grelhado com batata frita crocante.",
+        preco: 28.9,
+        emoji: "🥩",
+      },
+      {
+        id: 5,
+        nome: "Feijoada",
+        descricao: "Feijoada completa com acompanhamentos.",
+        preco: 32.9,
+        emoji: "🍲",
+      },
+      {
+        id: 6,
+        nome: "Agua com Gas",
+        descricao: "Garrafa de água com gás 500ml.",
+        preco: 4.5,
+        emoji: "💧",
+      },
+    ],
+  },
+  {
+    id: 2,
+    nome: "Pizza Boa",
+    categoria: "Pizzaria",
+    tempo: "30-40 min",
+    taxa: 7,
+    nota: 4.7,
+    descricao: "Pizzas clássicas com massa fina e recheio caprichado.",
+    emoji: "🍕",
+    menu: [
+      {
+        id: 7,
+        nome: "Pizza Calabresa",
+        descricao: "Molho, queijo e calabresa.",
+        preco: 39.9,
+        emoji: "🍕",
+      },
+      {
+        id: 8,
+        nome: "Pizza Marguerita",
+        descricao: "Queijo, tomate e manjericão.",
+        preco: 37.9,
+        emoji: "🍕",
+      },
+      {
+        id: 9,
+        nome: "Refrigerante 2L",
+        descricao: "Coca-Cola ou Guaraná.",
+        preco: 11,
+        emoji: "🥤",
+      },
+      {
+        id: 10,
+        nome: "Pizza 4 Queijos",
+        descricao: "Mussarela, provolone, parmesão e gorgonzola.",
+        preco: 42.9,
+        emoji: "🧀",
+      },
+      {
+        id: 11,
+        nome: "Pizza Pepperoni",
+        descricao: "Massa com pepperoni e muito queijo derretido.",
+        preco: 40.9,
+        emoji: "🍕",
+      },
+      {
+        id: 12,
+        nome: "Broto de Pizza",
+        descricao: "Meio pizza para quem quer experimentar.",
+        preco: 22.9,
+        emoji: "🍕",
+      },
+    ],
+  },
+  {
+    id: 3,
+    nome: "Burger Point",
+    categoria: "Hamburgueria",
+    tempo: "20-30 min",
+    taxa: 6,
+    nota: 4.9,
+    descricao: "Hambúrguer artesanal com combos básicos e saborosos.",
+    emoji: "🍔",
+    menu: [
+      {
+        id: 13,
+        nome: "X-Burger",
+        descricao: "Pão, carne, queijo e molho.",
+        preco: 19.9,
+        emoji: "🍔",
+      },
+      {
+        id: 14,
+        nome: "Combo X-Salada",
+        descricao: "Hambúrguer, fritas e refrigerante.",
+        preco: 29.9,
+        emoji: "🍔",
+      },
+      {
+        id: 15,
+        nome: "Batata Frita",
+        descricao: "Porção individual crocante.",
+        preco: 12.9,
+        emoji: "🍟",
+      },
+      {
+        id: 16,
+        nome: "X-Tudo",
+        descricao: "Duas carnes, queijo, bacon, ovo e alface.",
+        preco: 32.9,
+        emoji: "🍔",
+      },
+      {
+        id: 17,
+        nome: "Onion Rings",
+        descricao: "Anéis de cebola crocante.",
+        preco: 14.9,
+        emoji: "🧅",
+      },
+      {
+        id: 18,
+        nome: "Milk-shake",
+        descricao: "Chocolate, morango ou baunilha.",
+        preco: 13.9,
+        emoji: "🥤",
+      },
+    ],
+  },
+  {
+    id: 4,
+    nome: "Sushi Fresh",
+    categoria: "Japonesa",
+    tempo: "35-45 min",
+    taxa: 8,
+    nota: 4.6,
+    descricao: "Combinados simples, temakis e porções frias para o dia a dia.",
+    emoji: "🍣",
+    menu: [
+      {
+        id: 19,
+        nome: "Combo 20 Peças",
+        descricao: "Seleção com sushi, sashimi e hot roll.",
+        preco: 42.9,
+        emoji: "🍣",
+      },
+      {
+        id: 20,
+        nome: "Temaki Salmão",
+        descricao: "Temaki tradicional com cream cheese.",
+        preco: 21.9,
+        emoji: "🍤",
+      },
+      {
+        id: 21,
+        nome: "Sunomono",
+        descricao: "Salada de pepino agridoce.",
+        preco: 9.9,
+        emoji: "🥒",
+      },
+      {
+        id: 22,
+        nome: "Combo 30 Peças",
+        descricao: "Diversidade maior com mais variedade.",
+        preco: 59.9,
+        emoji: "🍣",
+      },
+      {
+        id: 23,
+        nome: "Ura Maki",
+        descricao: "Arroz na parte externa, atum e abacate.",
+        preco: 18.9,
+        emoji: "🍣",
+      },
+      {
+        id: 24,
+        nome: "Harumaki",
+        descricao: "Rolinho frito recheado com vegetais.",
+        preco: 16.9,
+        emoji: "🥟",
+      },
+    ],
+  },
+  {
+    id: 5,
+    nome: "Massa Mania",
+    categoria: "Massas",
+    tempo: "30-40 min",
+    taxa: 6,
+    nota: 4.7,
+    descricao: "Massas básicas com molho caseiro e porções bem servidas.",
+    emoji: "🍝",
+    menu: [
+      {
+        id: 25,
+        nome: "Lasanha Bolonhesa",
+        descricao: "Lasanha tradicional gratinada.",
+        preco: 31.9,
+        emoji: "🍝",
+      },
+      {
+        id: 26,
+        nome: "Macarrão Alfredo",
+        descricao: "Massa com molho cremoso e frango.",
+        preco: 28.9,
+        emoji: "🍝",
+      },
+      {
+        id: 27,
+        nome: "Nhoque ao Sugo",
+        descricao: "Nhoque macio com molho de tomate.",
+        preco: 26.9,
+        emoji: "🍝",
+      },
+      {
+        id: 28,
+        nome: "Espaguete à Carbonara",
+        descricao: "Massa com bacon, ovo e queijo parmesan.",
+        preco: 29.9,
+        emoji: "🍝",
+      },
+      {
+        id: 29,
+        nome: "Ravioli Recheado",
+        descricao: "Ravioli recheado de queijo com molho pesto.",
+        preco: 27.9,
+        emoji: "🍝",
+      },
+      {
+        id: 30,
+        nome: "Salada Italiana",
+        descricao: "Tomate, mozzarela, manjericão e azeite.",
+        preco: 19.9,
+        emoji: "🥗",
+      },
+    ],
+  },
+  {
+    id: 6,
+    nome: "Açai da Praça",
+    categoria: "Açai e sobremesas",
+    tempo: "15-25 min",
+    taxa: 4,
+    nota: 4.9,
+    descricao: "Copos de açai, cremes e adicionais simples para matar a vontade.",
+    emoji: "🍓",
+    menu: [
+      {
+        id: 31,
+        nome: "Açai 400ml",
+        descricao: "Açai com banana e granola.",
+        preco: 16.9,
+        emoji: "🍓",
+      },
+      {
+        id: 32,
+        nome: "Açai 700ml",
+        descricao: "Açai grande com dois acompanhamentos.",
+        preco: 23.9,
+        emoji: "🍓",
+      },
+      {
+        id: 33,
+        nome: "Milk-shake de Morango",
+        descricao: "Milk-shake cremoso finalizado com chantilly.",
+        preco: 14.9,
+        emoji: "🍓",
+      },
+      {
+        id: 34,
+        nome: "Açai com Chocolate",
+        descricao: "Açai com calda de chocolate e amendoim.",
+        preco: 18.9,
+        emoji: "🍫",
+      },
+      {
+        id: 35,
+        nome: "Picolé Natural",
+        descricao: "Picolé de frutas vermelhas.",
+        preco: 8.9,
+        emoji: "🍦",
+      },
+      {
+        id: 36,
+        nome: "Brownie com Calda",
+        descricao: "Brownie quente com calda de chocolate.",
+        preco: 15.9,
+        emoji: "🍫",
+      },
+    ],
+  },
+  {
+    id: 7,
+    nome: "Taco Express",
+    categoria: "Mexicana",
+    tempo: "20-30 min",
+    taxa: 5,
+    nota: 4.8,
+    descricao: "Tacos, burritos e quesadillas com temperos autênticos.",
+    emoji: "🌮",
+    menu: [
+      {
+        id: 37,
+        nome: "Taco de Carne",
+        descricao: "Carne moída com cebola e pimenta.",
+        preco: 12.9,
+        emoji: "🌮",
+      },
+      {
+        id: 38,
+        nome: "Burrito Completo",
+        descricao: "Tortilla com carne, feijão e queijo.",
+        preco: 24.9,
+        emoji: "🌯",
+      },
+      {
+        id: 39,
+        nome: "Quesadilla",
+        descricao: "Tortilla dobrada com queijo derretido.",
+        preco: 18.9,
+        emoji: "🧀",
+      },
+      {
+        id: 40,
+        nome: "Combo Tacos",
+        descricao: "3 tacos de sua escolha.",
+        preco: 34.9,
+        emoji: "🌮",
+      },
+      {
+        id: 41,
+        nome: "Nachos com Guacamole",
+        descricao: "Tortilla chips com guacamole caseiro.",
+        preco: 22.9,
+        emoji: "🥑",
+      },
+      {
+        id: 42,
+        nome: "Agua Fresca",
+        descricao: "Bebida refrescante de melancia ou hortelã.",
+        preco: 6.9,
+        emoji: "🥤",
+      },
+    ],
+  },
+  {
+    id: 8,
+    nome: "Hot Dog King",
+    categoria: "Hot Dogs",
+    tempo: "15-25 min",
+    taxa: 4,
+    nota: 4.5,
+    descricao: "Hot dogs gourmet com coberturas premium e irresistíveis.",
+    emoji: "🌭",
+    menu: [
+      {
+        id: 43,
+        nome: "Hot Dog Simples",
+        descricao: "Pão, salsicha e molhos.",
+        preco: 10.9,
+        emoji: "🌭",
+      },
+      {
+        id: 44,
+        nome: "Hot Dog Especial",
+        descricao: "Com bacon, queijo e ovo.",
+        preco: 16.9,
+        emoji: "🌭",
+      },
+      {
+        id: 45,
+        nome: "Batata Palha",
+        descricao: "Porção crocante e quente.",
+        preco: 11.9,
+        emoji: "🍟",
+      },
+      {
+        id: 46,
+        nome: "Hot Dog Gourmet",
+        descricao: "Bacon, queijo cheddar, ovo e cebola roxa.",
+        preco: 19.9,
+        emoji: "🌭",
+      },
+      {
+        id: 47,
+        nome: "Batida de Frutas",
+        descricao: "Morango, maçã ou laranja.",
+        preco: 9.9,
+        emoji: "🍓",
+      },
+      {
+        id: 48,
+        nome: "Combo Dois Hot Dogs",
+        descricao: "Dois hot dogs especiais com batata.",
+        preco: 28.9,
+        emoji: "🌭",
+      },
+    ],
+  },
+];
+
+export function formatarPreco(valor: number) {
+  return valor.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
